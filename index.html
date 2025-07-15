@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI职业性格测试-专业版</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="test-container">
+            <div id="welcome-screen" class="screen active">
+                <h1>MBTI职业性格测试-专业版</h1>
+                <div class="intro">
+                    <h2>测试说明</h2>
+                    <p>迈尔斯-布里格斯类型指标(MBTI)是一个帮助你了解自己性格特征的工具。</p>
+                    
+                    <h3>测试须知：</h3>
+                    <ol>
+                        <li>请务必诚实、独立地回答问题，只有如此，才能得到有效的结果。</li>
+                        <li>本测试展示的是你的性格倾向，而不是你的知识、技能、经验。</li>
+                        <li>性格类型没有好坏，只有不同。了解自己的性格优劣势，有利于更好地发挥特长。</li>
+                        <li>本测试共93题，预计需要18分钟完成。</li>
+                        <li>所有题目没有对错之分，请根据第一反应选择最符合的选项。</li>
+                    </ol>
+
+                    <div class="dimension-intro">
+                        <h3>MBTI四个维度：</h3>
+                        <ul>
+                            <li><strong>E外向-I内向：</strong> 能量来源与关注方向</li>
+                            <li><strong>S感觉-N直觉：</strong> 信息收集与认知方式</li>
+                            <li><strong>T思维-F情感：</strong> 决策与判断依据</li>
+                            <li><strong>J判断-P知觉：</strong> 行动与生活方式</li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="start-btn" class="btn">开始测试</button>
+            </div>
+
+            <div id="question-screen" class="screen">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <div class="question-container">
+                    <h2 id="question-number">问题 1/93</h2>
+                    <p id="question-text"></p>
+                    <div class="options">
+                        <button class="option-btn" data-value="A"></button>
+                        <button class="option-btn" data-value="B"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result-screen" class="screen">
+                <h2>测试结果</h2>
+                <div id="personality-type" class="result-type"></div>
+                <div id="personality-desc" class="result-description"></div>
+                <div class="result-details">
+                    <div class="dimension-bars">
+                        <div class="dimension">
+                            <span>外向 (E)</span>
+                            <div class="bar-container">
+                                <div id="E-bar" class="bar"></div>
+                            </div>
+                            <span>内向 (I)</span>
+                        </div>
+                        <div class="dimension">
+                            <span>感觉 (S)</span>
+                            <div class="bar-container">
+                                <div id="S-bar" class="bar"></div>
+                            </div>
+                            <span>直觉 (N)</span>
+                        </div>
+                        <div class="dimension">
+                            <span>思维 (T)</span>
+                            <div class="bar-container">
+                                <div id="T-bar" class="bar"></div>
+                            </div>
+                            <span>情感 (F)</span>
+                        </div>
+                        <div class="dimension">
+                            <span>判断 (J)</span>
+                            <div class="bar-container">
+                                <div id="J-bar" class="bar"></div>
+                            </div>
+                            <span>知觉 (P)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button id="export-btn" class="btn export-btn">导出结果为图片</button>
+                    <button id="restart-btn" class="btn">重新测试</button>
+                </div>
+                <div id="author-info" class="author-section">
+                    <p>制作者：tewer</p>
+                    <p>© 2025 版权所有</p>
+                    <div class="donate-section">
+                        <button id="donate-btn" class="btn donate-btn">支持作者（点击图片可放大！）</button>
+                        <div id="donate-qr" class="donate-qr">
+                            <img src="images/weichat.jpg" alt="微信支付" class="qr-code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript文件 -->
+    <script src="js/html2canvas.min.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
